@@ -1,7 +1,6 @@
 #target illustrator  
 
-// https://github.com/Adobe-CEP/CEP-Resources/issues/238
-// sean256
+evt = 'close-save-all';
 
 function sendEvent(type) {
     new ExternalObject('lib:\PlugPlugExternalObject');
@@ -10,4 +9,4 @@ function sendEvent(type) {
     event.dispatch();
 }
 
-sendEvent('close-save-all');
+sendEvent(evt);
