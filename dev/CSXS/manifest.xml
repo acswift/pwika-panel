@@ -1,12 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ExtensionManifest ExtensionBundleId="com.my.test" ExtensionBundleVersion="1.0.0" Version="8.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ExtensionManifest ExtensionBundleId="love.svija.SvijaTools" ExtensionBundleVersion="1.0.0" Version="8.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
   <ExtensionList>
-    <Extension Id="com.my.test.panel" Version="1.0.0" />
+    <Extension Id="love.svija.SvijaTools.panel" Version="1.0.0" />
+    <Extension Id="love.svija.SvijaLauncher.panel" Version="1.0.0" />
   </ExtensionList>
+
   <ExecutionEnvironment>
     <HostList>
       <Host Name="ILST" Version="17" />
-      <Host Name="ILST" Version="25" />
     </HostList>
     <LocaleList>
       <Locale Code="All" />
@@ -15,27 +17,33 @@
       <RequiredRuntime Name="CSXS" Version="8.0" />
     </RequiredRuntimeList>
   </ExecutionEnvironment>
+
   <DispatchInfoList>
-    <Extension Id="com.my.test.panel">
+    
+    <Extension Id="love.svija.SvijaTools.panel"><!-- ———————————————————— -->
       <DispatchInfo>
         <Resources>
           <MainPath>./client/index.html</MainPath>
-          <ScriptPath>./host/index.jsx</ScriptPath>
           <CEFCommandLine />
         </Resources>
+
         <Lifecycle>
-          <AutoVisible>true</AutoVisible>
+          <AutoVisible>false</AutoVisible>  
+          <StartOn>  
+            <Event>documentAfterActivate</Event>
+          </StartOn>  
         </Lifecycle>
+
         <UI>
           <Type>Panel</Type>
-          <Menu>My First Panel</Menu>
+          <Menu>Svija Tools</Menu>
             <Geometry>
               <Size>
                   <Width>240</Width>
                   <Height>230</Height>
               </Size>
               <MinSize>
-                  <Width>240</Width>
+                  <Width>137</Width>
                   <Height>40</Height>
               </MinSize>
               <MaxSize>
@@ -43,12 +51,45 @@
                   <Height>2000</Height>
               </MaxSize>
             </Geometry>
-
-
-
           <Icons />
         </UI>
       </DispatchInfo>
     </Extension>
+
+    <Extension Id="love.svija.SvijaLauncher.panel"><!-- ———————————————————— -->
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./client/launcher.html</MainPath>
+          <CEFCommandLine />
+        </Resources>
+
+        <Lifecycle>
+          <AutoVisible>false</AutoVisible>  
+          <StartOn>  
+            <Event>documentAfterActivate</Event>
+          </StartOn>  
+        </Lifecycle>
+
+        <UI>
+          <Type>Custom</Type>
+          <Geometry>
+            <Size>
+              <Height>130</Height>
+              <Width>240</Width>
+            </Size>
+            <MaxSize>
+              <Height>130</Height>
+              <Width>240</Width>
+            </MaxSize>
+            <MinSize>
+              <Height>130</Height>
+              <Width>240</Width>
+            </MinSize>
+          </Geometry>
+          <Icons />
+        </UI>
+      </DispatchInfo>
+    </Extension>
+
   </DispatchInfoList>
 </ExtensionManifest>
