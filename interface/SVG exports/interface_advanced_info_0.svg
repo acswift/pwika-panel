@@ -14,28 +14,28 @@
 	.st8{fill:#464646;stroke:#464646;stroke-miterlimit:10;}
 	.st9{fill:#AAAAAA;stroke:#AAAAAA;stroke-miterlimit:10;}
 	.st10{fill:#DCDCDC;stroke:#DCDCDC;stroke-miterlimit:10;}
-	.st11{fill:#828282;stroke:#828282;stroke-miterlimit:10;}
+	.st11{fill:#828282;}
 	.st12{font-family:'SourceSansPro-SemiBold';}
 	.st13{font-size:8.5px;}
-	.st14{fill:#8C8C8C;stroke:#8C8C8C;stroke-miterlimit:10;}
-	.st15{fill:#5A5A5A;stroke:#5A5A5A;stroke-miterlimit:10;}
-	.st16{fill:#8C8C8C;stroke:#5A5A5A;stroke-miterlimit:10;}
+	.st14{fill:#8C8C8C;}
+	.st15{fill:#464646;}
+	.st16{fill:#5A5A5A;}
 	.st17{fill:#DCDCDC;}
 	.st18{font-size:12px;}
 	.st19{fill:none;}
 	.st20{fill:#969696;}
 	.st21{font-family:'SourceSansPro-Regular';}
 	.st22{fill:#AAAAAA;}
-	.st23{fill:#5A5A5A;}
-	.st24{fill:#787878;}
-	.st25{fill:#646464;stroke:#646464;stroke-miterlimit:10;}
-	.st26{fill:#969696;stroke:#969696;stroke-miterlimit:10;}
-	.st27{fill:#C8C8C8;stroke:#C8C8C8;stroke-miterlimit:10;}
-	.st28{fill:#505050;stroke:#505050;stroke-miterlimit:10;}
-	.st29{fill:#E6E6E6;stroke:#E6E6E6;stroke-miterlimit:10;}
-	.st30{fill:#2D8CEB;}
-	.st31{fill:#C8C8C8;}
-	.st32{fill:#464646;}
+	.st23{fill:#787878;}
+	.st24{fill:#5A5A5A;stroke:#5A5A5A;stroke-miterlimit:10;}
+	.st25{fill:#828282;stroke:#828282;stroke-miterlimit:10;}
+	.st26{fill:#646464;stroke:#646464;stroke-miterlimit:10;}
+	.st27{fill:#969696;stroke:#969696;stroke-miterlimit:10;}
+	.st28{fill:#C8C8C8;stroke:#C8C8C8;stroke-miterlimit:10;}
+	.st29{fill:#505050;stroke:#505050;stroke-miterlimit:10;}
+	.st30{fill:#E6E6E6;stroke:#E6E6E6;stroke-miterlimit:10;}
+	.st31{fill:#2D8CEB;}
+	.st32{fill:#C8C8C8;}
 	.st33{fill:#323232;}
 	.st34{fill:#646464;}
 	.st35{opacity:0;}
@@ -54,7 +54,7 @@
 			<rect x="10" y="168" class="st7" width="220" height="1"/>
 		</g>
 		<g>
-			<rect x="0" y="315" transform="matrix(-1 -4.493662e-11 4.493662e-11 -1 240 642)" class="st7" width="240" height="12"/>
+			<rect x="0" y="315" transform="matrix(-1 -4.495927e-11 4.495927e-11 -1 240 642)" class="st7" width="240" height="12"/>
 		</g>
 	</g>
 	<g id="bottom_bar_text">
