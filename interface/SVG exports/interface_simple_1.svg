@@ -103,7 +103,7 @@
 			<text transform="matrix(1 0 0 1 26.4226 52.0625)" class="st22 st13 st23">Relink Images</text>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 142.8024 52.0625)" class="st22 st13 st23">Save for Svija</text>
+			<text transform="matrix(1 0 0 1 144.5544 52.0625)" class="st22 st13 st23">Save as Svija</text>
 		</g>
 	</g>
 	<g id="top_stroke">
@@ -127,18 +127,18 @@
 	</g>
 </g>
 <g id="mouseover__xBB_">
-	<g id="mov3">
+	<g id="mouseover_3">
 	</g>
-	<g id="mov2">
+	<g id="mouseover_2">
 	</g>
-	<g id="mov1">
+	<g id="mouseover_1">
 		<g id="mov1-2">
 			<path class="st29" d="M226.5,59h-98c-1.93,0-3.5-1.57-3.5-3.5v-15c0-1.93,1.57-3.5,3.5-3.5h98c1.93,0,3.5,1.57,3.5,3.5v15
 				C230,57.429,228.43,59,226.5,59z"/>
 			<path class="st15" d="M128.5,38c-1.379,0-2.5,1.122-2.5,2.5v15c0,1.378,1.121,2.5,2.5,2.5h98c1.379,0,2.5-1.122,2.5-2.5v-15
 				c0-1.378-1.121-2.5-2.5-2.5H128.5z"/>
 			<g>
-				<text transform="matrix(1 0 0 1 142.8024 52.0625)" class="st30 st13 st23">Save for Svija</text>
+				<text transform="matrix(1 0 0 1 144.5544 52.0625)" class="st30 st13 st23">Save as Svija</text>
 			</g>
 		</g>
 		<g id="mov1-1">
@@ -160,25 +160,25 @@
 			</g>
 		</g>
 	</g>
-	<g id="mov0">
+	<g id="mouseover_0">
 	</g>
 </g>
 <g id="mousedowns__xBB_">
-	<g id="mod3">
+	<g id="mousedown_3">
 	</g>
-	<g id="mod2">
+	<g id="mousedown_2">
 	</g>
-	<g id="mod1">
-		<g id="mod1-6">
+	<g id="mousedown_1">
+		<g id="mod1-2">
 			<path class="st33" d="M226.5,59h-98c-1.93,0-3.5-1.57-3.5-3.5v-15c0-1.93,1.57-3.5,3.5-3.5h98c1.93,0,3.5,1.57,3.5,3.5v15
 				C230,57.429,228.43,59,226.5,59z"/>
 			<path class="st15" d="M128.5,38c-1.379,0-2.5,1.122-2.5,2.5v15c0,1.378,1.121,2.5,2.5,2.5h98c1.379,0,2.5-1.122,2.5-2.5v-15
 				c0-1.378-1.121-2.5-2.5-2.5H128.5z"/>
 			<g>
-				<text transform="matrix(1 0 0 1 142.8024 52.0625)" class="st34 st13 st23">Save for Svija</text>
+				<text transform="matrix(1 0 0 1 144.5544 52.0625)" class="st34 st13 st23">Save as Svija</text>
 			</g>
 		</g>
-		<g id="mod1-5">
+		<g id="mod1-1">
 			<path class="st33" d="M111.5,59h-98c-1.93,0-3.5-1.57-3.5-3.5v-15c0-1.93,1.57-3.5,3.5-3.5h98c1.93,0,3.5,1.57,3.5,3.5v15
 				C115,57.429,113.43,59,111.5,59z"/>
 			<path class="st15" d="M13.5,38c-1.378,0-2.5,1.122-2.5,2.5v15c0,1.378,1.122,2.5,2.5,2.5h98c1.378,0,2.5-1.122,2.5-2.5v-15
@@ -197,7 +197,7 @@
 			</g>
 		</g>
 	</g>
-	<g id="mod0">
+	<g id="mousedown_0">
 	</g>
 </g>
 <g id="listener_links__xBB_">

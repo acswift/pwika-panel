@@ -102,7 +102,7 @@
 			<text transform="matrix(1 0 0 1 26.4226 52.0625)" class="st22 st12 st23">Relink Images</text>
 		</g>
 		<g>
-			<text transform="matrix(1 0 0 1 142.8025 52.0625)" class="st22 st12 st23">Save for Svija</text>
+			<text transform="matrix(1 0 0 1 144.5544 52.0625)" class="st22 st12 st23">Save as Svija</text>
 		</g>
 	</g>
 	<g id="top_stroke">
@@ -126,20 +126,20 @@
 	</g>
 </g>
 <g id="mouseover__xBB_">
-	<g id="mov3">
+	<g id="mouseover_3">
 	</g>
-	<g id="mov2">
+	<g id="mouseover_2">
 	</g>
-	<g id="mov1">
+	<g id="mouseover_1">
 	</g>
-	<g id="mov0">
+	<g id="mouseover_0">
 		<g id="mov0-2">
 			<path class="st29" d="M226.5,59h-98c-1.93,0-3.5-1.57-3.5-3.5v-15c0-1.93,1.57-3.5,3.5-3.5h98c1.93,0,3.5,1.57,3.5,3.5v15
 				C230,57.429,228.43,59,226.5,59z"/>
 			<path class="st31" d="M128.5,38c-1.379,0-2.5,1.122-2.5,2.5v15c0,1.378,1.121,2.5,2.5,2.5h98c1.379,0,2.5-1.122,2.5-2.5v-15
 				c0-1.378-1.121-2.5-2.5-2.5H128.5z"/>
 			<g>
-				<text transform="matrix(1 0 0 1 142.8025 52.0625)" class="st22 st12 st23">Save for Svija</text>
+				<text transform="matrix(1 0 0 1 144.5544 52.0625)" class="st22 st12 st23">Save as Svija</text>
 			</g>
 		</g>
 		<g id="mov0-1">
@@ -163,23 +163,23 @@
 	</g>
 </g>
 <g id="mousedowns__xBB_">
-	<g id="mod3">
+	<g id="mousedown_3">
 	</g>
-	<g id="mod2">
+	<g id="mousedown_2">
 	</g>
-	<g id="mod1">
+	<g id="mousedown_1">
 	</g>
-	<g id="mod0">
-		<g id="mod0-6">
+	<g id="mousedown_0">
+		<g id="mod0-2">
 			<path class="st30" d="M226.5,59h-98c-1.93,0-3.5-1.57-3.5-3.5v-15c0-1.93,1.57-3.5,3.5-3.5h98c1.93,0,3.5,1.57,3.5,3.5v15
 				C230,57.429,228.43,59,226.5,59z"/>
 			<path class="st31" d="M128.5,38c-1.379,0-2.5,1.122-2.5,2.5v15c0,1.378,1.121,2.5,2.5,2.5h98c1.379,0,2.5-1.122,2.5-2.5v-15
 				c0-1.378-1.121-2.5-2.5-2.5H128.5z"/>
 			<g>
-				<text transform="matrix(1 0 0 1 142.8025 52.0625)" class="st33 st12 st23">Save for Svija</text>
+				<text transform="matrix(1 0 0 1 144.5544 52.0625)" class="st33 st12 st23">Save as Svija</text>
 			</g>
 		</g>
-		<g id="mod0-5">
+		<g id="mod0-1">
 			<path class="st30" d="M111.5,59h-98c-1.93,0-3.5-1.57-3.5-3.5v-15c0-1.93,1.57-3.5,3.5-3.5h98c1.93,0,3.5,1.57,3.5,3.5v15
 				C115,57.429,113.43,59,111.5,59z"/>
 			<path class="st31" d="M13.5,38c-1.378,0-2.5,1.122-2.5,2.5v15c0,1.378,1.122,2.5,2.5,2.5h98c1.378,0,2.5-1.122,2.5-2.5v-15
@@ -208,7 +208,7 @@
 	</g>
 	<g id="links0">
 		<rect id="link0-2" x="122.099" y="34.5" class="st34" width="111" height="27.5"/>
-		<rect id="link0-1_00000147212541325807686860000006799152857363046035_" x="7" y="34.5" class="st34" width="111" height="27.5"/>
+		<rect id="link0-1" x="7" y="34.5" class="st34" width="111" height="27.5"/>
 		<rect id="link0-0" x="7" y="7" class="st34" width="111" height="27.5"/>
 	</g>
 </g>

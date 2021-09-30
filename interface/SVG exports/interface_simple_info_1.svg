@@ -65,7 +65,7 @@
 	</g>
 	<g id="left_help">
 		<g>
-			<text transform="matrix(1 0 0 1 9.3831 18.8193)"><tspan x="0" y="0" class="st17 st13 st18">Relink Images </tspan><tspan x="72.155" y="15" class="st17 st13 st18"> </tspan><tspan x="72.155" y="30" class="st17 st13 st18"> </tspan><tspan x="2.761" y="65" class="st17 st13 st18">Save for Svija</tspan></text>
+			<text transform="matrix(1 0 0 1 9.3831 18.8193)"><tspan x="0" y="0" class="st17 st13 st18">Relink Images </tspan><tspan x="72.155" y="15" class="st17 st13 st18"> </tspan><tspan x="72.155" y="30" class="st17 st13 st18"> </tspan><tspan x="6.265" y="65" class="st17 st13 st18">Save as Svija</tspan></text>
 		</g>
 	</g>
 	<g id="logo__x26__right_help">
@@ -90,23 +90,23 @@
 	</g>
 </g>
 <g id="mouseover__xBB_">
-	<g id="mov3">
+	<g id="mouseover_3">
 	</g>
-	<g id="mov2">
+	<g id="mouseover_2">
 	</g>
-	<g id="mov1">
+	<g id="mouseover_1">
 	</g>
-	<g id="mov0">
+	<g id="mouseover_0">
 	</g>
 </g>
 <g id="mousedowns__xBB_">
-	<g id="mod3">
+	<g id="mousedown_3">
 	</g>
-	<g id="mod2">
+	<g id="mousedown_2">
 	</g>
-	<g id="mod1">
+	<g id="mousedown_1">
 	</g>
-	<g id="mod0">
+	<g id="mousedown_0">
 	</g>
 </g>
 <g id="listener_links__xBB_">
