@@ -31,13 +31,19 @@ To enable both versions to be installed at the same time, the beta version as a 
 ---
 ### Version Updates
 
-Following are the instructions for releasing a new version of Svija Sync.
-
-1. create new signed version, zipped in the distribution folder
-2. create a [new DMG](https://github.com/svijalove/dmg-installation), in the distribution folder
+Instructions for releasing a new version of Svija Tools.
 
 ---
-### 1. Merge to Master
+### 1. New Master Version
+
+Create a temporary master version:
+
+- duplicate the **beta version folder** to **Svija Tools**
+- remove the word **beta** from the bundle identifier in **CSXS/manifest.xml**
+- create new signed version, zipped in the distribution folder
+
+---
+### 2. Git Merge to Master
 
 Check out the **destination branch** and merge ([list of commits](https://github.com/svijalove/Svija-Tools/commits/beta)):
 ```
@@ -52,7 +58,7 @@ Push the new version:
 git push origin master
 ```
 ---
-### 2. Update the Documentation
+### 3. Update the Documentation
 
 Copy info from/to:
 
@@ -60,7 +66,7 @@ Copy info from/to:
 - [tech.svija.love/manual/changelog-tools](https://tech.svija.love/manual/changelog-tools)
 
 ---
-### 3. Create A New Github Release
+### 4. Create A New Github Release
 
 On github, create a new release from the **master branch**.
 
@@ -69,7 +75,7 @@ On github, create a new release from the **master branch**.
 - use the changelog text for the description
 
 ---
-### 4. Check Out the Beta Branch
+### 5. Check Out the Beta Branch
 
 Commit any changes, then check out the beta branch:
 ```
@@ -83,20 +89,21 @@ git merge master --no-ff -m "starting new version"
 git push -u
 ```
 ---
-### 7. Increment the Version Number
+### 6. Increment the Version Number
 
 Places to update the version number:
 - this README.md
+- Svija Tools Beta/CSXS/manifest.xml
 
 ---
-### 8. Update tutorial content at tech.svija.com
+### 7. Update tutorial content at tech.svija.com
 
 Read through the [changelog](https://tech.svija.love/reference/changelogs/changelog-tools) and make a list of modfications for the new version.
 
 Update the [documentation pages](https://tech.svija.love) if necessary.
 
 ---
-### 7. Post to Social Media
+### 8. Post to Social Media
 
 Find a nice picture or make an ad to accompany the update, then
 
@@ -105,7 +112,6 @@ Find a nice picture or make an ad to accompany the update, then
 - [instagram/svijalove](https://instagram/svijalove) (make it 3x wide · has to be posted from phone)
 - [linkedin.com/company/svijalove](https://linkedin.com/company/svijalove) (add text before adding image)
 
----
 ---
 
 # older content
