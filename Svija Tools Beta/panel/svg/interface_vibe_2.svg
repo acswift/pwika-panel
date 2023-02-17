@@ -387,7 +387,7 @@
   </g>
   <g id="ai_links_" data-name="ai links »">
     <g id="history.back_" data-name="history.back();">
-      <a xlink:href="javascript:history.back();">
+      <a xlink:href="javascript:openLink(&apos;vibeBack&apos;);">
         <rect class="cls-16" x="0" width="240" height="641"/>
       </a>
     </g>

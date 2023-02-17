@@ -243,7 +243,7 @@
   </g>
   <g id="ai_links_" data-name="ai links »">
     <g id="history.back_" data-name="history.back();">
-      <a xlink:href="javascript:history.back();">
+      <a xlink:href="javascript:openLink(&apos;less.html&apos;);">
         <rect class="cls-8" x="0" y="0" width="240" height="160"/>
       </a>
     </g>
