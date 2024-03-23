@@ -31,6 +31,7 @@
 
 /*:::::::::::::::::::::::::::::::::::::::: control functions */
 
+
 /*———————————————————————————————————————— statusUpdate(arg)
 
     gets info about ai-land and updates
@@ -105,19 +106,31 @@ function statusUpdate(val){
 
   // point indicator  ———————————————————————————————————————————————
 
-  if (localStorage.pointSnap == '1') indPoint.style.color = 'var(--indicatorOn)'
-  else                               indPoint.style.color = 'var(--indicatorOff)'
+//if (localStorage.pointSnap == '1') indPoint.style.color = 'var(--indicatorOn)'
+//else                               indPoint.style.color = 'var(--indicatorOff)'
 
   // pixel indicator  ———————————————————————————————————————————————
 
-  if (localStorage.pixelSnap == '1') indPixel.style.color = 'var(--indicatorOn)'
-  else                               indPixel.style.color = 'var(--indicatorOff)'
+//if (localStorage.pixelSnap == '1') indPixel.style.color = 'var(--indicatorOn)'
+//else                               indPixel.style.color = 'var(--indicatorOff)'
 
 
 }
 
 
 /*:::::::::::::::::::::::::::::::::::::::: indicators */
+
+/*———————————————————————————————————————— online indicator */
+
+indOnline.addEventListener('mouseup', (evn) => {
+  jsx.evalScript('colorPicker()', setAccent)
+})
+
+// https://community.adobe.com/t5/illustrator-discussions/show-color-picker-dialog-jsx-csaw/td-p/5877341
+
+function setAccent(arg){
+  lert(arg)
+}
 
 /*———————————————————————————————————————— grid indicator */
 
@@ -176,9 +189,9 @@ function setGuide(swap){
 
 /*———————————————————————————————————————— point indicator */
 
-indPoint.addEventListener('mouseup', (evn) => {
-  setPoint()
-})
+//indPoint.addEventListener('mouseup', (evn) => {
+//  setPoint()
+//})
 
 function setPoint(){
 
@@ -192,9 +205,9 @@ function setPoint(){
 
     menu command is pixelconstraints but it doesn't work */
 
-indPixel.addEventListener('mouseup', (evn) => {
-  setPixel()
-})
+//indPixel.addEventListener('mouseup', (evn) => {
+//  setPixel()
+//})
 
 function setPixel(){
   lert('Menu « Affichage »\r(en bas du menu)')
@@ -227,35 +240,11 @@ function setSmart(swap){
   if (!swap) jsx.evalScript('menuCommand("Snapomatic on-off menu item")')
 }
 
-/*———————————————————————————————————————— reload
-
-    for development only */
-
-indReload.addEventListener('click', (evn) => {
-  location.reload()
-})
-
-/*———————————————————————————————————————— local storage FIX AFTER DEBUGGING
-
-    ALSO FIX status-update.jsx
+/*———————————————————————————————————————— local storage
 
     localStorage.removeItem('isSvija') */
 
 dumpLS.addEventListener('click', (evn) => {
-
-  file = env_path + 'preferences-update.jsx'
-  jsx.evalScript("$.evalFile('" + file + "')")
-
-  jsx.evalScript('returnGrid()',lert)
-
-})
-
-
-
-
-
-
-/*
 
   var res = 'localStorage contains '+localStorage.length + ' items:\n\n'
 
@@ -268,7 +257,8 @@ dumpLS.addEventListener('click', (evn) => {
     }
   }
 
-  alert(res) */
+  alert(res)
+})
 
 /*———————————————————————————————————————— show more •••
 
@@ -301,11 +291,9 @@ function windowExpand(){
 
     */
 
-createGrp.addEventListener("click", createGroupInit)
-
-function createGroupInit(){
+createGrp.addEventListener("click", (evn) => {
   jsx.evalScript("createGroup()", feedbackSimple)
-}
+})
 
 /*———————————————————————————————————————— 1.2 place image
 
@@ -326,14 +314,14 @@ changeCase.addEventListener('mouseup', (evn) => {
   jsx.evalScript(str, feedbackSimple)
 })
 
-/*———————————————————————————————————————— 1.4 open folder */
+/*———————————————————————————————————————— 1.4 open folder
+
+    */ 
 
 const pcOpener  = 'C:\\Windows\\explorer.exe'
 const macOpener = '/usr/bin/open'
 
-showFolder.addEventListener('mouseup', openFolder);
-
-function openFolder(){
+showFolder.addEventListener('mouseup', (evn) => {
 
   if (localStorage.isMac == 'true') var opener = macOpener
   else                              var opener = pcOpener
@@ -359,7 +347,7 @@ function openFolder(){
 //path = "C:\\Users\\andy\\Desktop\\pixside.fr\\sync\\Example Pages" // worked
   window.cep.process.createProcess(opener, path)
 
-}
+})
 
 /*———————————————————————————————————————— 1.5 launch site & cloud
 
@@ -431,36 +419,21 @@ btnOpen.addEventListener('click', (evn) => {
 
 /*:::::::::::::::::::::::::::::::::::::::: buttons bottom */
 
-/*———————————————————————————————————————— 2.1 check & repair
+/*———————————————————————————————————————— 2.1 import default styles
 
-    */
+*/
 
-chkRepair.addEventListener('click', (evn) => {
-  aiTimeout('checkRepair()', 'feedback', 100)
-})
+/*———————————————————————————————————————— 2.2 set default styles
 
-/*———————————————————————————————————————— 2.2 new page/module
+*/
+
+/*———————————————————————————————————————— 2.3 new page/module
 
     alt = create module instead of page */
 newPage.addEventListener('click', (evn) => {
   var alt   = evn.getModifierState('Alt');
   var doubleLastPath = doubleSlashes(localStorage.lastPath)
   jsx.evalScript('newPage(' + alt + ', "' + doubleLastPath +'",' + localStorage.isMac+')')
-})
-
-/*———————————————————————————————————————— 2.3 new project
-
-    sends an email requesting new project */
-
-newProject.addEventListener('click', (evn) => {
-  var alt = evn.getModifierState('Alt')
-
-  //url = 'mailto:support@svija.com'
-  //url = 'mailto:support@svija.com?subject=Demande de nouveau projet Svija&body=Bonjour\n\nJe voudrais démarrer un nouveau projet Svija à l\'adresse suivante :\n\n       ______.svija.site\n\nCordialement,'
-  url = 'mailto:support@svija.com?subject=Demande de nouveau projet Svija&body=Bonjour\n\nJe voudrais démarrer un nouveau projet Svija à l\'adresse suivante :\n\n       ______.svija.site\n\nCordialement,'
-
-  url = encodeURI(url)
-  jsx.openURLInDefaultBrowser(url)
 })
 
 /*———————————————————————————————————————— 2.4 empty cache NEEDS HELP
@@ -495,7 +468,15 @@ async function testFetch(){
 }
 */
 
-/*———————————————————————————————————————— 2.5 launch support */
+/*———————————————————————————————————————— 2.5 check & repair
+
+    */
+
+chkRepair.addEventListener('click', (evn) => {
+  aiTimeout('checkRepair()', 'feedback', 100)
+})
+
+/*———————————————————————————————————————— 2.6 launch support */
 
 launchSupport.addEventListener('click', (evn) => {
   var alt = evn.getModifierState('Alt')
@@ -510,6 +491,7 @@ launchSupport.addEventListener('click', (evn) => {
 
 /*:::::::::::::::::::::::::::::::::::::::: interface functions */
 
+
 /*———————————————————————————————————————— initializeLabels()
 
     the area attribute serves as a flag whether title and
@@ -519,19 +501,20 @@ buttons = [
 
 //  id               label      alt-label      tooltip
 
-  ['createGrp'    , 'Groupe' , 'Groupe'   , 'Créer un groupe'                                                       ],
-  ['placeImage'   , 'Image'  , 'Image'    , 'Importer une image'                                                    ],
-  ['changeCase'   , 'Casse'  , 'Mot mot'  , 'Changer la casse · alt = Premières Lettres En Maj'                     ],
-  ['showFolder'   , 'Dossier', 'Dossier'  , 'Ouvrir le dossier local'                                               ],
-  ['launchSite'   , 'Site'   , 'Cloud'    , 'Ouvrir le site web · alt = ouvrir Svija Cloud'                         ],
-  ['btnSave'      , '↯'      , '↯ tous'   , 'Sauvegarder la page · alt = sauvegarder toutes les pages ouvertes'     ],
-  ['btnOpen'      , 'OUVRIR' , 'Récent'   , 'Ouvrir un ficher · alt = ouvrir le fichier le plus récent'             ],
+  ['createGrp'    , 'Groupe'  , 'Groupe'   , 'Créer un groupe'                                                              ],
+  ['placeImage'   , 'Image'   , 'Image'    , 'Importer une image'                                                           ],
+  ['changeCase'   , 'Casse'   , 'Mot mot'  , 'Changer la casse · alt/option = Premières Lettres En Maj'                     ],
+  ['showFolder'   , 'Dossier' , 'Dossier'  , 'Ouvrir le dossier local'                                                      ],
+  ['launchSite'   , 'Site'    , 'Cloud'    , 'Ouvrir le site web dans un navigateur (alt/option = Svija Cloud)'             ],
+  ['btnSave'      , 'Sauv.'   , 'Tous'     , 'Sauvegarder la page · alt/option = sauvegarder toutes les pages ouvertes'     ],
+  ['btnOpen'      , 'Ouvrir'  , 'Récent'   , 'Ouvrir un ficher · alt/option = ouvrir le fichier le plus récent'             ],
 
-  ['chkRepair'    , 'Valider', 'Valider'  , 'Vérifier & réparer les problèmes'                                      ],
-  ['newPage'      , '+Page'  , 'Module'   , 'Nouvelle page · alt = nouveau module'                                  ],
-  ['newProject'   , '+Projet', '+Projet'  , 'Créer un nouveau projet Svija'                                         ],
-  ['clearCache'   , 'Cache'  , 'Cache'    , 'Vider le cache (si activé)'                                            ],
-  ['launchSupport', 'Support', 'Mail'     , 'Ouvrir le site de support technique · alt = envoyer un mail au support']
+  ['impStyles'    , '^Styles' , '^Styles'  , 'Importer styles par défaut'                                                   ],
+  ['expStyles'    , 'vStyes'  , 'vStyes'   , 'Établir comme styles par défaut'                                              ],
+  ['newPage'      , '+Page'   , 'Module'   , 'Nouvelle page · alt/option = nouveau module'                                  ],
+  ['clearCache'   , 'Cache'   , 'Cache'    , 'Vider le cache (si activé)'                                                   ],
+  ['chkRepair'    , 'Vérifier', 'Vérifier' , 'Vérifier & réparer les problèmes'                                             ],
+  ['launchSupport', 'Support' , 'Mail'     , 'Ouvrir le site de support technique · alt/option = envoyer un mail au support']
 ]
 
 function initializeLabels(){
@@ -546,75 +529,6 @@ function initializeLabels(){
 
 initializeLabels()
 
-/*———————————————————————————————————————— alt key listeners
-
-    get information about alt key state
-    alt is keyCode 18  */
-
-document.body.addEventListener('mouseover', buttonLabels)
-document.body.addEventListener('mouseout' , buttonLabels)
-document.body.addEventListener('mousemove', buttonLabels)
-document.body.addEventListener('mouseup'  , buttonLabels)
-document.body.addEventListener('mousedown', buttonLabels)
-
-/*———————————————————————————————————————— buttonLabels(evn)
-
-    alt text should show only when cursor is over panel
-    whether or not alt is pressed before entering airspace
-
-    when mouse moves away from panel it should revert
-
-    the only tricky part is when the mouse moves away from
-    the panel but panel has focus — alt key needs
-    to stop having effect */
-
-// area = flag that alt/title have been swapped
-
-
-function buttonLabels(evn){
-  var alt   = evn.getModifierState('Alt');
-
-  if (alt) // set to alt state
-    for (var x=0; x<buttons.length; x++)
-      window[buttons[x][0]].value = window[buttons[x][0]].alt
-
-  else // set to normal state
-    for (var x=0; x<buttons.length; x++)
-      window[buttons[x][0]].value = window[buttons[x][0]].name
-
-}
-
-/*———————————————————————————————————————— mouse over window COMMENTED OUT
-
-    store info about mouse over window state
-    and alt key if it happened before window
-    got focus */
-
-/*
-window.addEventListener('mouseover', altOver )
-window.addEventListener('mouseout',  altOut  )
-
-localStorage.isOver = false
-
-function altOver(event) {
-  jsx.registerKeyEventsInterest(keyStr)
-  localStorage.isOver = true
-
-  // handle case where alt key was pressed
-  // before panel was mouseovered
-  if (event.altKey){
-    localStorage.altDown = true
-    buttonLabels(true)
-  }
-}
-
-function altOut(event) {
-  jsx.registerKeyEventsInterest(null)
-  localStorage.isOver = false
-  buttonLabels(false)
-}
-*/
-
 /*———————————————————————————————————————— tooltips
 
     need to set a delay and if still over, show tooltip
@@ -623,12 +537,12 @@ function altOut(event) {
     a document is open (changes from save to open)  */
 
 var ttText  = mouseover.innerHTML
-var ttDelay = 1500
+var ttDelay = 1000
 
-var targetList = ['indOnline',  'indGrid',    'indGuide', 'indPoint', 'indPixel', 'indSmart', 'indReload', 'dumpLS',
-                  'btnSave',    
-                  'placeImage', 'changeCase', 'launchSite', 'showFolder', 'createGrp',
-                  'chkRepair',  'clearCache', 'newPage', 'newProject', 'launchSupport']
+var targetList = ['indOnline',  'indGrid',    'indGuide', 'indSmart', 'indReload', 'dumpLS',
+                  'createGrp', 'placeImage', 'changeCase', 'showFolder', 'launchSite', 'btnSave',    
+                  
+                  'chkRepair',  'clearCache', 'newPage',  'launchSupport']
 
 for (x=0; x<targetList.length; x++){
   window[targetList[x]].addEventListener('mouseover', function(e){
@@ -649,6 +563,70 @@ function showTip(objName){
     mouseover.style.color = 'var(--tooltipOn)'
   }
 }
+
+/*———————————————————————————————————————— mouse over window COMMENTED OUT
+
+    store info about mouse over window state
+    and alt key if it happened before window
+    got focus */
+
+// proved: mouseover/mouseout triggered on document.body even when there's no focus
+// proved: I can focus() an input field only if the panel already has focus
+
+/*
+window.addEventListener('mouseover', (evn) => {
+  document.body.style.backgroundColor="#550000"
+  testInput.focus()
+  //alert(evn)
+})
+
+window.addEventListener('mouseout'  , (evn) => {
+  document.body.style.backgroundColor="#444444"
+  testInput.blur()
+  //alert(evn)
+})
+
+var keyStr = 18 // option on mac
+jsx.registerKeyEventsInterest(keyStr)
+
+document.body.addEventListener('keydown', (evn) => {
+  alert(evn)
+})
+
+document.body.addEventListener('keyup'  , (evn) => {
+  alert(evn)
+})
+*/
+
+/*———————————————————————————————————————— buttonLabels(evn) COMMENTED OUT
+
+    alt text should show only when cursor is over panel
+    whether or not alt is pressed before entering airspace
+
+    when mouse moves away from panel it should revert
+
+    the only tricky part is when the mouse moves away from
+    the panel but panel has focus — alt key needs
+    to stop having effect */
+
+// area = flag that alt/title have been swapped
+
+/*
+function buttonLabels(evn){
+  var alt   = evn.getModifierState('Alt');
+
+function buttonLabels(alt){
+
+  if (alt) // set to alt state
+    for (var x=0; x<buttons.length; x++)
+      window[buttons[x][0]].value = window[buttons[x][0]].alt
+
+  else // set to normal state
+    for (var x=0; x<buttons.length; x++)
+      window[buttons[x][0]].value = window[buttons[x][0]].name
+
+}
+*/
 
 
 /*:::::::::::::::::::::::::::::::::::::::: utility functions */
