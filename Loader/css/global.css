@@ -1,61 +1,6 @@
 
 /*:::::::::::::::::::::::::::::::::::::::: global.css */
 
-/*———————————————————————————————————————— colors 1
-
-    should be converted to JSON and loaded dynamically */
-
-:root {
-
-  --svija                     : hsl(72 100%  50%);
-  --offline                   : hsl( 0   0%  53%);
-
-  --indicatorText             : hsl( 0 100%  50%); /* show errors */
-  --indicatorOn               : hsl( 0   0%  87%);
-  --indicatorOff              : hsl( 0   0%  60%);
-
-  --highlight-color           : hsl( 0   0% 100%);
-  --highlight-fill            : hsl( 0   0%  27%);
-
-  --tooltipOn                 : hsl( 0   0% 100%);
-  --tooltipOff                : hsl( 0   0%  60%);
-
-  --body-foreground           : hsl( 0   0% 100%);
-  --body-background           : hsl( 0   0%  33%);
-
-  --button-label              : hsl( 0   0%  67%);
-  --button-border             : hsl( 0   0%  22%);
-  --button-background         : hsl( 0   0%  37%);
-
-  --button-background-active  : hsl( 0   0%  13%);
-
-  --button-bottom-label       : hsl( 0   0%  60%);
-  --button-bottom-border      : hsl( 0   0%  13%);
-  --button-bottom-background  : hsl( 0   0%  22%);
-  --button-bottom-label-active: hsl( 0   0%  13%);
-
-  --showMore: #bbb;
-  --bottomSection-background  : hsl( 0   0%  26%);
-  --bottomSection-border-top  : hsl( 0   0%  22%);
-}
-
-/*———————————————————————————————————————— font declaration */
-
-@font-face {
-  font-family:'Source Sans Pro';
-  font-weight:normal;
-/*  src:url('./fonts/Source Sans Pro.woff') format('woff'); */
-  src:url('./fonts/SourceSansPro-Regular.woff') format('woff');
- 
-}
-
-@font-face {
-  font-family:'Source Sans Pro';
-  font-weight:bold;
-/*  src:url('./fonts/Source Sans Pro Bold.woff') format('woff'); */
-  src:url('./fonts/SourceSansPro-SemiBold.woff') format('woff');
-}
-
 /*———————————————————————————————————————— permanent */
 
 *{
@@ -73,7 +18,7 @@ html, body{
 
 body{
   padding-top:12px;
-  background-color:#535353;
+  background-color:var(--panel-bg);
   color:#bbb;
   font-family:'Source Sans Pro';
 }
@@ -95,6 +40,7 @@ a:link, a:visited{
 /*———————————————————————————————————————— logo */
 
 #svijaLogo{
+  cursor:pointer;
   margin:0;
   padding:0;
   width:115px;
@@ -105,7 +51,7 @@ a:link, a:visited{
 }
 
 #svijaLogo #logoBar{ fill: #424242; }
-#svijaLogo #logoArt{ fill: #ccff00; }
+#svijaLogo #logoArt{ fill: #646464; }
 
 /*———————————————————————————————————————— buttons & HR */
 
@@ -163,8 +109,8 @@ hr{
 /*———————————————————————————————————————— bottom bar */ 
 
 div#moreLess{
-  background-color:#464646;
-  border-top:1px solid #323232;
+  background-color:var(--panel-bg-dark);
+  border-top:1px solid var(--panel-border);
   text-align:right; 
   padding:0 9px;
   padding-bottom:3px;
@@ -181,11 +127,28 @@ div#moreLess span{
 }
 
 div#moreLess a{
-  color:#858585;
+  --panel-hamburger:hsl(0  0%  65%);
 }
 
 div#moreLess a:hover{
   color:#fff;
+}
+
+
+div#bottomSection input.hubIcon{
+  color:var(--button-bottom-label);
+  border:1px solid var(--button-bottom-border);
+  background-color:var(--button-bottom-background);
+}
+
+div#bottomSection input.hubIcon:hover{
+  color: var(--highlight-color);
+  background-color: var(--highlight-fill);
+  border:1px solid var(--system-highlight);
+}
+
+div#bottomSection input.hubIcon:active{
+  background-color:var(--button-bottom-label-active);
 }
 
 
@@ -277,22 +240,6 @@ input.hubIcon:active{
   background-color:var(--button-background-active);
 }
 
-div#bottomSection input.hubIcon{
-  color:var(--button-bottom-label);
-  border:1px solid var(--button-bottom-border);
-  background-color:var(--button-bottom-background);
-}
-
-div#bottomSection input.hubIcon:hover{
-  color: var(--highlight-color);
-  background-color: var(--highlight-fill);
-  border:1px solid var(--system-highlight);
-}
-
-div#bottomSection input.hubIcon:active{
-  background-color:var(--button-bottom-label-active);
-}
-
 input.hubIcon#btnSave,
 input.hubIcon#btnOpen{
   background-color:var(--system-dimlight);
@@ -334,15 +281,6 @@ input.hubIcon#btnOpen{
 
 #showMore:hover{
   color:var(--highlight-color);
-}
-
-#bottomSection{
-  margin-top:6px;
-  background-color:var(--bottomSection-background);
-  height:35px;
-  border-top:1px solid var(--bottomSection-border-top);
-  padding-top:2px;
-  padding-bottom:6px;
 }
 
 /*———————————————————————————————————————— spinner & doneMsg */

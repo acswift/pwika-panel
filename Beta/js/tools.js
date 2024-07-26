@@ -316,11 +316,12 @@ showMore.addEventListener('click', windowExpand)
 windowExpand()
 
 function windowExpand(){
+
   var currentWidth  = parent.window.innerWidth
   var currentHeight = parent.window.innerHeight
 
   if (currentHeight != collapsedHeight){
-    bottomSection.style.display='none'
+//  bottomSection.style.display='none'
     jsx.resizeContent(currentWidth, collapsedHeight)
   }
   else{
