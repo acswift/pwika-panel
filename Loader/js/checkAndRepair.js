@@ -1,28 +1,33 @@
 
-//:::::::::::::::::::::::::::::::::::::::: addListeners.js
+/*:::::::::::::::::::::::::::::::::::::::: localFolder.js */
 
-var objId = 'button4l'
+/*———————————————————————————————————————— parameters */
 
-var obj = document.getElementById(objId)
+var objID    = 'buttCheck'
+var objLabel = 'check & repair'
 
-if (obj === null) lert(objId + ' is null')
+/*———————————————————————————————————————— configure button */
 
-obj.value="check & repair"
+var obj = document.getElementById(objID)
+if (obj === null) lert(objID + ' is null')
 
-obj.addEventListener('click', savePage)
+obj.value = objLabel
+obj.style.display = 'inline'
 
-/*———————————————————————————————————————— savePage()
+/*———————————————————————————————————————— listener function
 
-    copied directly from legacy, need to update */
+  opens folder based on localStorage lastPath */
 
-function savePage(){
+obj.addEventListener('mouseup', (evn) => {
+  var alt = evn.getModifierState('Alt');
 
+  var naam      = 'check.jsx'
   var ISMAC     = 'true'
   var param     = 'save'
   var MYDOCS    = '/Users/Main/Documents'
-  var utilities = PATH + '/jsx/Utilities.jsx'
+  var utilities = PATH + '/cep/utilities.jsx'
 
-  var file = PATH + '/jsx/Save.jsx'
+  var file = PATH + '/cep/' + naam
 
   CEP.evalScript("param  = '" + param  + "'")
   CEP.evalScript("ISMAC  = '" + ISMAC  + "'")
@@ -30,5 +35,9 @@ function savePage(){
 
   CEP.evalScript("$.evalFile('" + utilities + "')")
   CEP.evalScript("$.evalFile('" + file      + "')")
-}
+
+})
+
+
+/*:::::::::::::::::::::::::::::::::::::::: fin */
 
